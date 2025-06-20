@@ -1,0 +1,42 @@
+server:
+  port: 8443
+  ssl:
+    bundle: "self"
+
+spring:
+  application:
+    name: tls-hot-reload-server
+  ssl:
+    bundle:
+      pem:
+        self:
+          key:
+            alias: "self"
+          keystore:
+            private-key: "file:/Users/natarajmb/Development/work/java/tls-hot-reload/certs/server.key"
+            certificate: "file:/Users/natarajmb/Development/work/java/tls-hot-reload/certs/server.crt"
+          reload-on-update: true
+        remote:
+          key:
+            alias: "remote"
+          truststore:
+            certificate: "file:/Users/natarajmb/Development/work/java/tls-hot-reload/certs/client.crt"
+          reload-on-update: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,metrics"
+  server:
+    port: 8080
+    ssl:
+      enabled: false
+
+logging:
+  level:
+    org.springframework.boot.ssl: DEBUG
+    org.springframework.boot.web.embedded.tomcat.TomcatWebServer: DEBUG
+
+remote:
+  url: "https://localhost:8444"

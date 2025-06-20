@@ -1,0 +1,14 @@
+### Check ssl certs for server
+GET https://localhost:8443/ssl-info
+
+### Check ssl certs for client
+GET https://localhost:8444/ssl-info
+###
+
+### Make mtls call from server to client
+GET https://localhost:8443/api/test
+###
+
+### Make mtls call from client to server
+GET https://localhost:8444/api/test
+###
