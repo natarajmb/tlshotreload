@@ -1,6 +1,6 @@
 # Transport Layer Security Hot Reload Sample
 
-Sample project to demonstrate Spring Boot 3.2.x hot reload functionality
+Sample project to demonstrate Spring Boot 3.2.x SSL hot-reload functionality. Shows both webserver certs and mtls certs reload.
 
 ## How to run
 

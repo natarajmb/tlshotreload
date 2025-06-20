@@ -30,3 +30,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### PKI ###
+*.crt
+*.csr
+*.key

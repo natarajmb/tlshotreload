@@ -35,9 +35,6 @@ public class RestClientConfig {
         // Get the SSL bundle by name
         SslBundle sslBundle = sslBundles.getBundle("remote");
 
-        // Create SSL context from the bundle
-        SSLContext sslContext = sslBundle.createSslContext();
-
         // Wrap original managers with logging versions
         SslManagerBundle managers = sslBundle.getManagers();
         KeyManager[] keyManagers = managers.getKeyManagers();
