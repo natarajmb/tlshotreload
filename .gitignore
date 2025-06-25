@@ -35,3 +35,6 @@ build/
 *.crt
 *.csr
 *.key
+
+# Direnv
+.envrc
